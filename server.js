@@ -12,16 +12,14 @@ console.log(`Server started at http://localhost:${port}`);
 
 // second route is '/hello'
 app.use('/hello', (req, res, next) => {
-  res.end("Hello, World!");
-
-  next();
+  res.send("Hello World!")
 });
 
 // first route is '/' - root of my website
 app.use('/', (req, res, next) => {
-  res.end("Welcome!");
-
-  next();
+  res.send("Welcome!");
 });
+
+module.exports = app;
 
 
