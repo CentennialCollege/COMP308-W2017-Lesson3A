@@ -2,11 +2,13 @@ let express = require('express');
 let app = express();
 
 // create the port constant
-const port = 3000;
+//const port = 3000;
 
 // start listening on the port
-app.listen(port);
-console.log(`Server started at http://localhost:${port}`);
+app.listen(() => {
+  console.log(`Server started...`);
+})
+//console.log(`Server started at http://localhost:${port}`);
 
 // ROUTING - mounted our routes
 
